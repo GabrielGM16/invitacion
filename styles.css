@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdf8f2;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+    background-image: linear-gradient(to bottom right, #fff4e6, #ffe6f9);
+}
+
+h1 {
+    font-size: 4em;
+    color: #ff69b4;
+    font-family: 'Brush Script MT', cursive;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 2em;
+    color: #7d37a6;
+    margin: 15px 0;
+    background-color: #e3d4f1;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+.info {
+    font-size: 1.5em;
+    color: #7349a8;
+    margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f4a259;
+    background-color: #fff4d6;
+    padding: 10px 20px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f4d03f;
+}
+
+.location {
+    font-size: 1.5em;
+    color: #d8456a;
+    text-decoration: underline;
+    margin: 20px 0;
+    transition: color 0.3s;
+}
+
+.location:hover {
+    color: #ff69b4;
+}
+
+.image {
+    width: 300px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border: 5px solid #ff69b4;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.balloon {
+    width: 60px;
+    height: 80px;
+    background-color: #f9d8e4;
+    border-radius: 50%;
+    margin: 0 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.balloon::after {
+    content: '';
+    width: 2px;
+    height: 20px;
+    background-color: #888;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
